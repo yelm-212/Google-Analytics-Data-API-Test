@@ -154,6 +154,4 @@ public class GAService {
         return jsonResponses;
     }
 
-
-
 }

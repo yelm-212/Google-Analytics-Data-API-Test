@@ -75,7 +75,7 @@ public class GAController {
 
     // 기간을 입력받아 처리할 수도 있다.
     @GetMapping("/pageview/custom")
-    public ResponseEntity customStartEndDate(
+    public ResponseEntity toCustomStartEndDate(
             @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam("startdate") String startDate,
             @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam("enddate") String endDate) throws IOException {
         List<JSONObject> jsonResponse = gaService.dateAndResponse(startDate, endDate);
@@ -143,7 +143,7 @@ public class GAController {
                 .body(jsonResponse);
     }
 
-    @GetMapping("/sessionurl/custom")
+    @GetMapping("/sessionsource/custom")
     public ResponseEntity sessionSourceCustomStartEndDate(
             @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam("startdate") String startDate,
             @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam("enddate") String endDate) throws IOException {
